@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Man Walking Around Thw World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+        body 
+{ 
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden; 
+    animation: day2night 15s linear infinite; 
+} 
+.circle 
+{ 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%); 
+    width: 720px; 
+    height: 720px; 
+    animation: animate 25s linear infinite; 
+} 
+.man 
+{ 
+    width: 50%; 
+    height: 2px; 
+    background: transparent; 
+    position: absolute; 
+    top: calc(50% - 1px); 
+    transform-origin: right; 
+    animation: animateMan 10s linear infinite; 
+} 
+.man img  
+{ 
+    transform: rotate(60deg) translateY(15px); 
+} 
+@keyframes animate  
+{ 
+    0% 
+    { 
+        transform: translate(-50%,-50%) rotate(0deg) scale(.8); 
+    } 
+    100% 
+    { 
+        transform: translate(-50%,-50%) rotate(-360deg) scale(.8); 
+    } 
+} 
+@keyframes animateMan  
+{ 
+    0% 
+    { 
+        transform: rotate(0deg); 
+    } 
+    100% 
+    { 
+        transform: rotate(360deg); 
+    } 
+} 
+@keyframes day2night  
+{ 
+    0% 
+    { 
+        background: #fff; 
+    } 
+    10% 
+    { 
+        background: #fff; 
+    } 
+    50% 
+    { 
+        background: #00523f; 
+    } 
+    90% 
+    { 
+        background: #fff; 
+    } 
+    100% 
+    { 
+        background: #fff; 
+    } 
+}
+    </style>
+</head>
+<body>
+    <div class="circle"> 
+        <img src="globe.png"> 
+        <div class="man"> 
+         <img src="walking.gif"> 
+        </div> 
+       </div>
+</body>
+</html>
